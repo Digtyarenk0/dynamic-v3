@@ -1,0 +1,22 @@
+.skeleton {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(101.72deg, #f4f5f6 18.99%, rgba(244, 245, 246, 0.3) 45.82%, #f4f5f6 69.34%);
+        background-size: 400% 400%;
+        animation: gradient 1s infinite;
+    }
+}
+
+@keyframes gradient {
+    from {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}

@@ -1,0 +1,43 @@
+// PT
+@font-face {
+  font-family: "PT Mono Regular";
+  font-weight: 400;
+  src: url("shared/assets/fonts/PT-Mono-Regular-400.ttf") format("truetype");
+}
+$font-pt-mono-regular-400: "PT Mono Regular";
+
+@font-face {
+  font-family: "PT Mono Bold";
+  font-weight: 700;
+  src: url("shared/assets/fonts/PT-Mono-Bold-700.ttf") format("truetype");
+}
+$font-pt-mono-bold-700: "PT Mono Bold";
+
+// Inter
+@font-face {
+  font-family: "Inter Regular";
+  font-weight: 400;
+  src: url("shared/assets/fonts/Inter-Regular-400.ttf") format("truetype");
+}
+$font-inter-regular-400: "Inter Regular";
+
+@font-face {
+  font-family: "Inter Medium";
+  font-weight: 500;
+  src: url("shared/assets/fonts/Inter-Medium-500.ttf") format("truetype");
+}
+$font-inter-medium-500: "Inter Medium";
+
+@font-face {
+  font-family: "Inter Semi Bold";
+  font-weight: 600;
+  src: url("shared/assets/fonts/Inter-SemiBold-600.ttf") format("truetype");
+}
+$font-inter-semi-bold-600: "Inter Semi Bold";
+
+@font-face {
+  font-family: "Inter Bold";
+  font-weight: 700;
+  src: url("shared/assets/fonts/Inter-Bold-700.ttf") format("truetype");
+}
+$font-inter-bold-700: "Inter Bold";

@@ -1,0 +1,72 @@
+@import "src/app/styles/base.scss";
+
+.select_container {
+    width: 117px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 8px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #6e788c;
+    }
+    &Active {
+        &::after {
+            content: "";
+            position: absolute;
+            right: 8px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $color-grey;
+            border-top: 0;
+        }
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding: 0;
+        top: -54px;
+        right: 40px;
+        background: $color-white;
+        filter: drop-shadow(0px 14px 24px rgba(0, 0, 0, 0.09)) drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            z-index: -1;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $color-white;
+        }
+    }
+
+    .option {
+        &:hover {
+            background-color: $color-grey-light;
+        }
+    }
+
+    .active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hide {
+        min-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}

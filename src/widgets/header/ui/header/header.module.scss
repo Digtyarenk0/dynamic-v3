@@ -1,0 +1,39 @@
+@import "src/app/styles/base.scss";
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 84px;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 0 32px;
+  z-index: 10;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: $color-grey-two;
+  }
+
+  .left_side {
+    display: flex;
+    align-items: center;
+
+    .logotype {
+      display: flex;
+      align-items: baseline;
+
+      .logotype_img {
+        width: 190px;
+        min-width: 140px;
+        height: 28px;
+      }
+    }
+  }
+}

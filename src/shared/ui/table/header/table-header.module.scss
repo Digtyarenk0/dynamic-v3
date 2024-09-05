@@ -1,0 +1,22 @@
+@import "src/app/styles/base.scss";
+
+.table_header {
+  display: flex;
+  width: 100%;
+  border-bottom: 3px solid #23375a;
+
+  .column {
+    display: flex;
+    text-transform: uppercase;
+    padding: 12px 10px 6px;
+
+    &:first-child {
+      padding-left: 12px;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "src/app/styles/base.scss";
+
+.table_body {
+  & > *:nth-child(n) {
+    border-bottom: 1px solid $color-grey-two;
+  }
+  & > *:last-child {
+    border-bottom: none !important;
+  }
+}

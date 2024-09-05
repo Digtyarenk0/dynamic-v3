@@ -1,0 +1,48 @@
+@import "src/app/styles/base.scss";
+
+.option {
+    position: relative;
+    list-style-type: none;
+    text-align: left;
+    font-family: $font-pt-mono-bold-700;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 16px 0px 18px 20px;
+    background-color: $color-white;
+
+    .check {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        z-index: 1;
+        border: 2px solid rgba($color-grey, 0.5);
+        border-radius: 100%;
+    }
+    .check_ico {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        right: 16px;
+        top: 16px;
+        opacity: 0;
+        transition: 0.1s;
+    }
+    .check_ico_active {
+        background-color: $color-primary-light;
+        border: none;
+        opacity: 1;
+    }
+    &:hover {
+        border: none;
+        background-color: $color-primary-light;
+        .check {
+            border: none;
+        }
+        .check_ico {
+            opacity: 1;
+        }
+    }
+}

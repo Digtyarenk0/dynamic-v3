@@ -1,0 +1,121 @@
+@import "src/app/styles/base.scss";
+
+// Container
+.hiden {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+// Upload block
+.upload {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $color-upload-file-grey-hover;
+        .emu_btn {
+            transition: 0.2s;
+            background-color: $color-accent;
+        }
+        .text {
+            transition: 0.2s;
+            color: $color-white;
+        }
+        .ico_upload {
+            transition: 0.2s;
+            background-color: #000;
+        }
+    }
+
+    .ico_upload {
+        background-color: $color-grey;
+        mask: url("shared/assets/icons/upload.svg") no-repeat center / contain;
+        -webkit-mask: url("shared/assets/icons/upload.svg") no-repeat center / contain;
+        height: 52px;
+        width: 38px;
+        margin-bottom: 40px;
+        transition: 0.2s;
+    }
+
+    .text {
+        font-family: $font-pt-mono-bold-700;
+        font-size: 17px;
+        color: $color-grey;
+        transition: 0.2s;
+    }
+
+    .emu_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: $color-primary;
+        padding: 20px 18px;
+        transition: 0.2s;
+
+        .text {
+            font-family: $font-pt-mono-bold-700;
+            font-size: 12px;
+            color: $color-white;
+        }
+        .ico_upload_brake {
+            margin-right: 10px;
+        }
+    }
+}
+
+// Uploaded block
+.uploaded {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 85px;
+    width: -webkit-fill-available;
+    transition: 0.2s;
+
+    .preview {
+        object-fit: cover;
+        height: 85px;
+        min-width: 60px;
+        width: 85px;
+        min-height: 60px;
+        margin-right: 16px;
+    }
+
+    .file_name {
+        font-family: $font-pt-mono-bold-700;
+        font-size: 14px;
+        color: $color-grey;
+        margin: 32px 0;
+    }
+
+    .emu_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 275px;
+        background-color: $color-accent;
+        border: 6px solid $color-accent;
+        cursor: pointer;
+        padding: 4px 12px;
+        transition: 0.2s;
+
+        .text {
+            font-family: $font-pt-mono-bold-700;
+            font-size: 12px;
+            color: $color-white;
+        }
+        .ico_upload_brake {
+            margin-right: 10px;
+        }
+        &:hover {
+            border: 6px solid $color-primary;
+            transition: 0.2s;
+        }
+    }
+}

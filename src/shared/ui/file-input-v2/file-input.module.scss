@@ -1,0 +1,43 @@
+@import "src/app/styles/base.scss";
+
+// Upload block
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 3px dashed $color-grey-50p;
+    transition: 0.2s;
+
+    .title {
+        font-family: $font-pt-mono-bold-700;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: $color-primary;
+        transition: 0.2s;
+    }
+    .title_link {
+        color: $color-green-alert;
+        text-decoration: underline;
+        transition: 0.2s;
+    }
+    .ico {
+        stroke: $color-grey;
+        stroke-width: 3px;
+        transition: 0.2s;
+    }
+
+    &:hover {
+        border-color: $color-green-alert;
+        .title {
+            color: $color-green-alert;
+        }
+        .ico {
+            stroke: $color-green-alert;
+        }
+    }
+}

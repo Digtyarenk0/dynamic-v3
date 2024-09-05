@@ -1,0 +1,71 @@
+@import "src/app/styles/base.scss";
+
+.link {
+  cursor: pointer;
+  padding: 10px 24px;
+  transition: 0.2s;
+  &:hover {
+    background-color: $color-grey-light;
+  }
+}
+.token_copy {
+  position: relative;
+  scale: 0.9;
+  width: 18px;
+  height: 18px;
+  transition: 0.4s;
+  margin-left: 5px;
+  &:active {
+    color: $color-primary;
+    transition: 0.4s;
+    &::before {
+      content: url("shared/assets/icons/check_green.svg");
+      transform: scale(0.8);
+      transition: 0.25s;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.25s;
+  }
+  &::before {
+    position: absolute;
+    content: url("shared/assets/icons/copy.svg");
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.25s;
+  }
+  &:hover {
+    &::before,
+    &::after {
+      transition: 0.25s;
+      opacity: 1;
+    }
+  }
+}
+
+.billing {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0px;
+    background-color: $color-grey-light;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    background-color: $color-grey-two;
+  }
+}

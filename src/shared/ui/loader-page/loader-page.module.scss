@@ -1,0 +1,85 @@
+@import "src/app/styles/base.scss";
+
+.loader {
+  .loader_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(35, 55, 90, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .stage {
+      font-family: $font-inter-medium-500;
+      font-size: 16px;
+      margin-top: 8px;
+      color: white;
+    }
+
+    .loader_container {
+      font-size: 10px;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      text-align: center;
+      border-collapse: collapse;
+      vertical-align: top;
+
+      .loader_4 {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        animation: loader_4 1s ease infinite;
+        top: 50%;
+        margin: -30px auto 0 auto;
+      }
+
+      @-webkit-keyframes loader_4 {
+        0%,
+        100% {
+          box-shadow: -2px 15px 0 $color-accent, 10px 15px 0 $color-primary, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-primary;
+        }
+        25% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-accent, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-primary;
+        }
+        50% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-primary, 13px 46px 0 $color-accent,
+            -2px 27px 0 $color-primary;
+        }
+        75% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-primary, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-accent;
+        }
+      }
+
+      @keyframes loader_4 {
+        0%,
+        100% {
+          box-shadow: -2px 15px 0 $color-accent, 10px 15px 0 $color-primary, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-primary;
+        }
+        25% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-accent, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-primary;
+        }
+        50% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-primary, 10px 27px 0 $color-accent,
+            -2px 27px 0 $color-primary;
+        }
+        75% {
+          box-shadow: -2px 15px 0 $color-primary, 10px 15px 0 $color-primary, 10px 27px 0 $color-primary,
+            -2px 27px 0 $color-accent;
+        }
+      }
+    }
+  }
+}

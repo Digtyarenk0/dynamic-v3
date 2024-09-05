@@ -1,0 +1,98 @@
+@import "src/app/styles/base.scss";
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-pt-mono-bold-700;
+  text-transform: capitalize;
+  transition: 0.3s;
+  height: max-content;
+  cursor: pointer;
+  border: 6px solid transparent;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &--green {
+    color: $color-white;
+    background-color: $color-green-alert;
+
+    &:hover:enabled {
+      color: $color-white;
+      border-color: $color-primary;
+      box-shadow: 6px 6px 0 0 $color-primary;
+      transition: 0.3s;
+    }
+  }
+
+  &--grey {
+    color: $color-white;
+    background-color: $color-grey;
+
+    &:hover:enabled {
+      color: $color-white;
+      border-color: $color-primary;
+      box-shadow: 6px 6px 0 0 $color-primary;
+      transition: 0.3s;
+    }
+  }
+
+  &--light {
+    color: $color-grey;
+    background-color: $color-grey-light;
+
+    &:hover:enabled {
+      border-color: $color-primary;
+      box-shadow: 6px 6px 0 0 $color-primary;
+      transition: 0.3s;
+    }
+  }
+
+  &--none {
+    &:hover:enabled {
+      border-color: $color-primary;
+      box-shadow: 6px 6px 0 0 $color-primary;
+      transition: 0.3s;
+    }
+  }
+}
+
+.size {
+  font-family: $font-pt-mono-bold-700;
+  &--large {
+    font-style: normal;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 0.75px;
+
+    height: 72px;
+    padding: 26px;
+
+    &:hover:enabled {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &--small {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+
+    height: 40px;
+    padding: 5px 10px;
+
+    &:hover:enabled {
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
+}
+
+.fluid {
+  width: 100%;
+}

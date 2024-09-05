@@ -1,0 +1,36 @@
+@import "src/app/styles/base/_colors.scss";
+
+@mixin text-colors {
+  &--white {
+    color: $color-white;
+  }
+  &--grey {
+    color: $color-grey;
+  }
+  &--green {
+    color: $color-green;
+  }
+  &--yellow {
+    color: $color-yellow;
+  }
+  &--green-alert {
+    color: $color-green-alert;
+  }
+  &--accent {
+    color: $color-accent;
+  }
+  &--grey-o64 {
+    color: $color-grey;
+    opacity: 0.64;
+  }
+  &--grey-o50 {
+    color: $color-grey;
+    opacity: 0.64;
+  }
+  &--primary {
+    color: $color-primary;
+  }
+  &--blue {
+    color: $color-blue;
+  }
+}

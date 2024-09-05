@@ -1,0 +1,10 @@
+import cs from 'classnames';
+
+
+import styles from './{{kebabCase name}}.module.scss';
+
+export const {{ properCase name }} = ({ className }) => {
+  const [state, setState] = useState(null);
+  return <div className={cs(styles.{{ snakeCase name }}, className)}>Hello world</div>;
+};
+

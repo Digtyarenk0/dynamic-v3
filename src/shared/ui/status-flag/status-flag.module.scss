@@ -1,0 +1,55 @@
+@import "src/app/styles/base.scss";
+
+.status_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 34px;
+    svg {
+        margin-right: 8px;
+    }
+}
+
+.status_flag {
+    font-family: $font-inter-semi-bold-600;
+    font-size: 13px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pending {
+    @extend .status_container;
+    color: $color-grey;
+    padding: 10px;
+}
+
+.success,
+.checked {
+    @extend .status_container;
+    color: $color-green-alert;
+    padding: 10px;
+}
+
+.detected {
+    @extend .status_container;
+    color: $color-blue;
+    padding: 8px;
+}
+
+.fail {
+    @extend .status_container;
+    color: $color-accent;
+    padding: 10px;
+}
+
+.deprecated {
+    @extend .status_container;
+    color: $color-brown;
+    padding: 10px 15px;
+}
+
+.unknown {
+    @extend .status_container;
+    padding: 10px;
+}

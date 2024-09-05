@@ -1,0 +1,25 @@
+@import "src/app/styles/base.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 466px;
+  font-family: $font-pt-mono-bold-700;
+  text-transform: capitalize;
+  transition: 0.3s;
+  height: max-content;
+  cursor: pointer;
+  border: 0;
+
+  color: $color-accent;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

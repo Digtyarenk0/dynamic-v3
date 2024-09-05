@@ -1,0 +1,58 @@
+@import "src/app/styles/base.scss";
+
+.navigation {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  font-family: $font-pt-mono-bold-700;
+  font-style: normal;
+  line-height: 16px;
+  font-size: 14px;
+  text-align: center;
+
+  @include media("max", "widescreen") {
+    padding-left: 12px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 30px;
+    height: 100%;
+
+    .nav_link_active {
+      letter-spacing: 0.005em;
+      color: $color-primary;
+      opacity: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 4px;
+        background-color: $color-accent;
+      }
+    }
+
+    a {
+      transition: 0.2s;
+      letter-spacing: 0.005em;
+
+      white-space: nowrap;
+      text-decoration: none;
+      color: $color-grey;
+      opacity: 0.64;
+
+      &:hover {
+        transition: 0.2s;
+        opacity: 1;
+        color: $color-primary;
+      }
+    }
+  }
+}

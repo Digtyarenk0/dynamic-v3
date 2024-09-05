@@ -1,0 +1,11 @@
+@import "src/app/styles/base.scss";
+
+.action {
+    transition: 0.2s;
+    border: 6px solid transparent;
+
+    &:hover {
+        border-color: $color-primary;
+        box-shadow: 6px 6px 0 0 $color-primary;
+    }
+}

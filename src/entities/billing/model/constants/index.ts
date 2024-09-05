@@ -1,0 +1,1 @@
+export const BILLING_AMOUNT_FIX_ZERO = 0.001;

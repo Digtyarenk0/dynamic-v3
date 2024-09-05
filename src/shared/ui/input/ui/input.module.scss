@@ -1,0 +1,96 @@
+@import "src/app/styles/base.scss";
+
+@keyframes fadein {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text_input_container {
+  margin-top: 10px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .text_input {
+    border: 6px solid $color-grey-light;
+    font-family: $font-pt-mono-bold-700;
+    font-size: 16px;
+    color: $color-primary;
+    padding: 20px 36px 12px 18px;
+    border-radius: 0px;
+    transition: 0.3s;
+
+    &:focus {
+      background-color: $color-primary-light;
+      border-color: $color-primary;
+      box-shadow: 6px 6px 0px 0px $color-primary;
+      transition: 0.3s;
+    }
+  }
+
+  .helper_example {
+    cursor: pointer;
+    font-family: $font-inter-regular-400;
+    font-size: 12px;
+    color: $color-grey;
+    text-transform: inherit;
+    position: absolute;
+    bottom: -20px;
+    padding-top: 4px;
+    transition: 0.3s;
+  }
+  .helper_example_active {
+    transition: 0.3s;
+    bottom: -26px;
+  }
+
+  .placeholder {
+    cursor: text;
+    position: absolute;
+    left: 24px;
+    top: 20px;
+    bottom: 29px;
+    font-family: $font-pt-mono-bold-700;
+    font-size: 16px;
+    color: $color-grey-50p;
+    transition: 0.3s;
+  }
+  .placeholder_active {
+    font-family: $font-pt-mono-bold-700;
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    animation: fadein 0.5s;
+    left: 24px;
+    top: 12px;
+    bottom: 29px;
+  }
+
+  .valid {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    right: 16px;
+    top: 1.4em;
+    opacity: 0;
+    transition: 0.1s;
+  }
+
+  .valid_active {
+    opacity: 1;
+    transition: 0.1s;
+  }
+
+  .valid_err_active {
+    width: 20px;
+    height: 20px;
+    top: 1.25em;
+    opacity: 1;
+    transition: 0.1s;
+  }
+}

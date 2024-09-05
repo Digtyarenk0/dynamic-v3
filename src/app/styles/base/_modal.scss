@@ -1,0 +1,77 @@
+@import "src/app/styles/base.scss";
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-bgr-modal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.15s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.15s;
+  }
+}
+
+.modal__content {
+  padding: 20px;
+  max-width: 450px;
+  min-width: fit-content;
+  border-radius: 12px;
+  background-color: white;
+  transform: scale(0.5);
+  transition: 0.4s all;
+
+  &.active {
+    padding: 20px 32px;
+    border-radius: 12px;
+    background-color: white;
+    transform: scale(1);
+  }
+}
+
+.border-x {
+  position: relative;
+  border: 2px solid $color-border;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color-border;
+    cursor: pointer;
+  }
+
+  .border-x-close {
+    &:before,
+    &:after {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: " ";
+      height: 14px;
+      width: 1px;
+      background-color: $color-select-grey;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
